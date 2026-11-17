@@ -1,0 +1,57 @@
+.character-card {
+  display: flex;
+  flex-direction: column;
+  padding: 3rem 1.5rem 1.5rem;
+  color: var(--card-ink);
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: 120px 120px 8px 8px;
+  box-shadow: var(--card-shadow);
+  text-align: center;
+}
+
+.character-card :focus-visible {
+  outline-color: var(--card-focus);
+}
+
+.character-card__image {
+  margin: 0 auto 1rem;
+}
+
+.character-card__name {
+  margin-bottom: 0.3rem;
+  font-size: 1.7rem;
+  overflow-wrap: anywhere;
+}
+
+.character-card__epitaph {
+  color: var(--card-accent);
+  font-style: italic;
+}
+
+.character-card__facts {
+  margin: 0 0 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid color-mix(in srgb, var(--card-muted) 40%, transparent);
+}
+
+.character-card__label {
+  color: var(--card-muted);
+  font-family: var(--fuente-subtitulos);
+  font-size: 0.7rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.character-card__detail {
+  margin: 0;
+}
+
+.character-card__summary {
+  margin-bottom: 1.5rem;
+}
+
+/* Empuja el botón al final para alinear las tarjetas de una misma fila */
+.character-card__footer {
+  margin-top: auto;
+}
