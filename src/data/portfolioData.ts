@@ -22,6 +22,7 @@ export const profile: ProfileData = {
 export const navItems: NavItem[] = [
   { path: '/', label: 'Inicio', end: true },
   { path: '/personajes', label: 'Mis Personajes' },
+  { path: '/proyectos', label: 'Proyectos' },
 ];
 
 export const characters: CharacterItem[] = [
