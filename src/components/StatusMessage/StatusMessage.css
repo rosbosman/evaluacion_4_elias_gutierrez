@@ -1,0 +1,49 @@
+.status-message {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 1.5rem;
+  color: var(--card-ink);
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-left: 6px solid var(--card-muted);
+  border-radius: 4px;
+  box-shadow: var(--card-shadow);
+  text-align: center;
+}
+
+.status-message--error {
+  border-left-color: var(--card-accent);
+}
+
+.status-message :focus-visible {
+  outline-color: var(--card-focus);
+}
+
+.status-message__text {
+  margin: 0;
+}
+
+.status-message__spinner {
+  width: 1.5rem;
+  height: 1.5rem;
+  border: 3px solid var(--card-muted);
+  border-top-color: transparent;
+  border-radius: 50%;
+}
+
+/* La animación solo se activa si la persona no pidió reducir el movimiento */
+@media (prefers-reduced-motion: no-preference) {
+  .status-message__spinner {
+    animation: status-message-spin 0.9s linear infinite;
+  }
+}
+
+@keyframes status-message-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
