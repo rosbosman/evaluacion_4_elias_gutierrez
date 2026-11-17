@@ -9,7 +9,7 @@ const CAMPAIGN_NAME = 'El Trueno del Rey de la Tormenta';
 export const profile: ProfileData = {
   nombre: 'Elías Gutiérrez',
   tituloSitio: 'Elías Gutiérrez – Portafolio de Frontend y D&D',
-  tituloPestana: 'Cementerio de Aventureros D&D | Portafolio',
+  nombreSitio: 'Cementerio de Aventureros D&D',
   sobreMi:
     '¡Hola! Soy estudiante de Ingeniería Civil en Informática en la UCT y quise hacer una página de tipo salón de la fama y cementerio. Este portafolio es un proyecto donde combino mis conocimientos básicos en desarrollo web con las historias de mis personajes de D&D ya muertos.',
   introPersonajes: `Conoce a los aventureros que perdieron la vida durante la campaña de ${CAMPAIGN_NAME}.`,
@@ -22,8 +22,6 @@ export const profile: ProfileData = {
 export const navItems: NavItem[] = [
   { path: '/', label: 'Inicio', end: true },
   { path: '/personajes', label: 'Mis Personajes' },
-  { path: '/proyectos', label: 'Proyectos' },
-  { path: '/contacto', label: 'Contacto' },
 ];
 
 export const characters: CharacterItem[] = [

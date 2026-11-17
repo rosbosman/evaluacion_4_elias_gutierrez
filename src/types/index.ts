@@ -1,3 +1,5 @@
+import type { ReactNode } from 'react';
+
 /**
  * Definiciones globales de interfaces y tipos del proyecto (RF-02).
  * Regla: todo props, estado, respuesta de API y evento se tipa aquí; no se usa `any`.
@@ -36,7 +38,8 @@ export interface CharacterItem {
 export interface ProfileData {
   nombre: string;
   tituloSitio: string;
-  tituloPestana: string;
+  /** Nombre corto del sitio, usado como sufijo del <title> de cada vista. */
+  nombreSitio: string;
   sobreMi: string;
   introPersonajes: string;
   introContacto: string;
@@ -52,3 +55,52 @@ export interface NavItem {
   /** Si es true, el enlace solo está activo con coincidencia exacta de ruta (ej. "/"). */
   end?: boolean;
 }
+
+/* ------------------------------------------------------------------ */
+/* Props de componentes                                                */
+/* ------------------------------------------------------------------ */
+
+export interface SiteHeaderProps {
+  titulo: string;
+  items: NavItem[];
+}
+
+export interface NavbarProps {
+  items: NavItem[];
+}
+
+export interface SiteFooterProps {
+  profile: ProfileData;
+}
+
+export interface PageSectionProps {
+  title: string;
+  subtitle?: string;
+  children?: ReactNode;
+}
+
+export interface ParchmentCardProps {
+  children: ReactNode;
+}
+
+export type ButtonVariant = 'primary' | 'outline';
+
+export interface ButtonLinkProps {
+  to: string;
+  children: ReactNode;
+  variant?: ButtonVariant;
+  /** Ocupa todo el ancho disponible (usado dentro de las tarjetas de personaje). */
+  block?: boolean;
+}
+
+export interface CharacterCardProps {
+  character: CharacterItem;
+}
+
+/* ------------------------------------------------------------------ */
+/* Parámetros de ruta                                                  */
+/* ------------------------------------------------------------------ */
+
+export type CharacterRouteParams = {
+  characterId: string;
+};
