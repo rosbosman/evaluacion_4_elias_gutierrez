@@ -1,0 +1,25 @@
+.theme-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.4rem 0.8rem;
+  color: var(--page-link);
+  background: transparent;
+  border: 1px solid var(--page-line-strong);
+  border-radius: 999px;
+  font-family: var(--fuente-subtitulos);
+  font-size: 0.8rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.theme-toggle:hover {
+  color: var(--page-link-hover);
+  border-color: currentcolor;
+}
+
+.theme-toggle__icon {
+  font-size: 1rem;
+  line-height: 1;
+}
