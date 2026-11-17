@@ -1,0 +1,35 @@
+.layout {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.layout__main {
+  flex: 1 0 auto;
+  width: 100%;
+}
+
+/* El foco programático al cambiar de vista no necesita anillo visible */
+.layout__main:focus {
+  outline: none;
+}
+
+.layout__skip-link {
+  position: absolute;
+  top: -4rem;
+  left: 0.5rem;
+  z-index: 10;
+  padding: 0.7rem 1rem;
+  color: var(--tinta);
+  background: var(--foco);
+  border: 0;
+  border-radius: 4px;
+  font-family: var(--fuente-subtitulos);
+  font-size: 0.8rem;
+  cursor: pointer;
+}
+
+.layout__skip-link:focus-visible {
+  top: 0.5rem;
+  outline-color: var(--rojo);
+}

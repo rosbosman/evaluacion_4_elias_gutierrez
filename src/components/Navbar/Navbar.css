@@ -1,0 +1,31 @@
+.navbar__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem 1.5rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.navbar__link {
+  display: inline-block;
+  padding: 0.4rem 0.8rem;
+  color: var(--page-link);
+  border-bottom: 2px solid transparent;
+  font-family: var(--fuente-subtitulos);
+  font-size: 0.8rem;
+  letter-spacing: 0.12em;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.navbar__link:hover {
+  color: var(--page-link-hover);
+}
+
+/* La ruta activa se distingue por color y por subrayado (no solo por color) */
+.navbar__link--active {
+  color: var(--page-link-hover);
+  border-bottom-color: currentcolor;
+}
