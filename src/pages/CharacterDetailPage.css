@@ -1,0 +1,39 @@
+.character-detail {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.character-detail__image {
+  margin: 0 auto;
+  border-radius: 4px;
+}
+
+.character-detail__facts {
+  display: grid;
+  gap: 0.75rem;
+  margin: 0 0 1.5rem;
+}
+
+.character-detail__label {
+  color: var(--card-muted);
+  font-family: var(--fuente-subtitulos);
+  font-size: 0.7rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.character-detail__value {
+  margin: 0;
+}
+
+.character-detail__heading {
+  margin-bottom: 0.5rem;
+  font-size: 1.4rem;
+}
+
+@media (min-width: 700px) {
+  .character-detail {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.2fr);
+    align-items: start;
+  }
+}
