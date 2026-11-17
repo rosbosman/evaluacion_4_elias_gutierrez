@@ -104,3 +104,18 @@ export interface CharacterCardProps {
 export type CharacterRouteParams = {
   characterId: string;
 };
+
+/* ------------------------------------------------------------------ */
+/* Tema claro / oscuro (Context API)                                   */
+/* ------------------------------------------------------------------ */
+
+export type Theme = 'dark' | 'light';
+
+export interface ThemeContextValue {
+  theme: Theme;
+  toggleTheme: () => void;
+}
+
+export interface ThemeProviderProps {
+  children: ReactNode;
+}
