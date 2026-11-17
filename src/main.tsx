@@ -1,6 +1,11 @@
+import '@fontsource/cinzel/latin-400.css';
+import '@fontsource/crimson-text/latin-400.css';
+import '@fontsource/crimson-text/latin-400-italic.css';
+import '@fontsource/medievalsharp/latin-400.css';
 import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
-import App from './App';
+import { App } from './App';
+import './index.css';
 
 const rootElement = document.getElementById('root');
 

@@ -1,5 +1,23 @@
-function App() {
-  return <h1>Cementerio de Aventureros D&amp;D</h1>;
-}
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { Layout } from './components/Layout/Layout';
+import { CharacterDetailPage } from './pages/CharacterDetailPage';
+import { CharactersPage } from './pages/CharactersPage';
+import { HomePage } from './pages/HomePage';
+import { NotFoundPage } from './pages/NotFoundPage';
 
-export default App;
+/** Configuración de BrowserRouter, Routes y Layout (RF-03). */
+export function App() {
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route element={<Layout />}>
+          <Route index element={<HomePage />} />
+          <Route path="personajes" element={<CharactersPage />} />
+          <Route path="personajes/:characterId" element={<CharacterDetailPage />} />
+          {/* Ruta comodín: cualquier URL no declarada cae aquí */}
+          <Route path="*" element={<NotFoundPage />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
+  );
+}
