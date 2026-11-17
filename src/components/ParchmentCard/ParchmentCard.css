@@ -1,0 +1,14 @@
+.parchment-card {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 1.5rem;
+  color: var(--card-ink);
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: 4px;
+  box-shadow: var(--card-shadow);
+}
+
+.parchment-card :focus-visible {
+  outline-color: var(--card-focus);
+}

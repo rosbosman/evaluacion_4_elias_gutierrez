@@ -1,0 +1,38 @@
+.button {
+  display: inline-block;
+  padding: 0.7rem 1.5rem;
+  border: 1px solid var(--card-accent);
+  border-radius: 5px;
+  font-family: var(--fuente-subtitulos);
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.button--block {
+  display: block;
+  width: 100%;
+}
+
+.button--outline {
+  color: var(--card-accent);
+  background: transparent;
+}
+
+.button--outline:hover {
+  color: var(--pergamino-claro);
+  background: var(--card-accent);
+}
+
+.button--primary {
+  color: var(--pergamino-claro);
+  background: var(--card-accent);
+}
+
+.button--primary:hover {
+  background: var(--card-ink);
+  border-color: var(--card-ink);
+}
