@@ -86,11 +86,21 @@ export interface ParchmentCardProps {
 export type ButtonVariant = 'primary' | 'outline';
 
 export interface ButtonLinkProps {
+  /** Ruta interna (react-router) o URL absoluta si `external` es true. */
   to: string;
   children: ReactNode;
   variant?: ButtonVariant;
-  /** Ocupa todo el ancho disponible (usado dentro de las tarjetas de personaje). */
+  /** Ocupa todo el ancho disponible (usado dentro de las tarjetas). */
   block?: boolean;
+  /** Enlace a otro sitio: se renderiza un <a> que abre en pestaña nueva con rel seguro. */
+  external?: boolean;
+}
+
+export interface ButtonProps {
+  children: ReactNode;
+  variant?: ButtonVariant;
+  type?: 'button' | 'submit';
+  onClick?: () => void;
 }
 
 export interface CharacterCardProps {
@@ -118,4 +128,44 @@ export interface ThemeContextValue {
 
 export interface ThemeProviderProps {
   children: ReactNode;
+}
+
+/* ------------------------------------------------------------------ */
+/* API REST pública: GitHub (Alternativa A)                            */
+/* ------------------------------------------------------------------ */
+
+/** Subconjunto de la respuesta de GET /users/{usuario}/repos que consume el portafolio. */
+export interface GitHubRepo {
+  id: number;
+  name: string;
+  description: string | null;
+  html_url: string;
+  language: string | null;
+  stargazers_count: number;
+  updated_at: string;
+}
+
+/** Ciclo de vida explícito de una petición asíncrona: cargando, éxito o error. */
+export interface FetchState<T> {
+  data: T | null;
+  loading: boolean;
+  error: string | null;
+}
+
+export interface UseFetchApiResult<T> extends FetchState<T> {
+  /** Vuelve a lanzar la petición (por ejemplo, tras un error de red). */
+  retry: () => void;
+}
+
+export type StatusVariant = 'loading' | 'error' | 'empty';
+
+export interface StatusMessageProps {
+  variant: StatusVariant;
+  message: string;
+  /** Si se entrega, el estado de error muestra un botón "Reintentar". */
+  onRetry?: () => void;
+}
+
+export interface ProjectCardProps {
+  repo: GitHubRepo;
 }
