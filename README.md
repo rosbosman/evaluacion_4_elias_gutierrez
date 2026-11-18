@@ -98,6 +98,10 @@ npm run build
 npm run preview
 ```
 
+> `npm audit` informa advertencias de severidad alta en `picomatch` (ReDoS), una dependencia transitiva de Vite
+> usada solo en tiempo de compilación; no forma parte del código que se publica en `dist/`. La corrección
+> automática exige degradar Vite a una versión anterior, por lo que se dejó como está.
+
 Otros scripts: `npm run lint` (oxlint, incluye reglas de accesibilidad y `typescript/no-explicit-any` como error),
 `npm run format` y `npm run format:check` (Prettier).
 

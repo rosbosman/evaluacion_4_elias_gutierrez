@@ -5,7 +5,7 @@ import './Button.css';
 /**
  * Enlace con apariencia de botón. Es siempre un <a> real: con Link para rutas internas
  * (navegación SPA sin recargar) y con <a target="_blank" rel="noopener noreferrer"> para
- * sitios externos. Usar <button> o <div onClick> aquí rompería la semántica.
+ * sitios externos. Un <button> aquí perdería el href, el clic central y la navegación nativa.
  */
 export function ButtonLink({
   to,
