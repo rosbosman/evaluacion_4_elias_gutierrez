@@ -1,4 +1,4 @@
-import type { ReactNode } from 'react';
+import type { ChangeEvent, ReactNode } from 'react';
 
 /**
  * Definiciones globales de interfaces y tipos del proyecto (RF-02).
@@ -168,4 +168,36 @@ export interface StatusMessageProps {
 
 export interface ProjectCardProps {
   repo: GitHubRepo;
+}
+
+/* ------------------------------------------------------------------ */
+/* Formularios y filtros                                               */
+/* ------------------------------------------------------------------ */
+
+export interface FormFieldProps {
+  id: string;
+  label: string;
+  value: string;
+  onChange: (event: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => void;
+  type?: 'text' | 'search' | 'email';
+  /** Renderiza un <textarea> en lugar de un <input>. */
+  multiline?: boolean;
+  rows?: number;
+  /** Mensaje de error de validación; si existe, el campo se marca con aria-invalid. */
+  error?: string;
+  required?: boolean;
+  autoComplete?: string;
+  placeholder?: string;
+  maxLength?: number;
+}
+
+export interface CharacterFilterProps {
+  query: string;
+  selectedClass: string;
+  classOptions: string[];
+  resultCount: number;
+  totalCount: number;
+  onQueryChange: (query: string) => void;
+  onClassChange: (selectedClass: string) => void;
+  onReset: () => void;
 }

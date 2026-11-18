@@ -39,6 +39,7 @@
   --card-focus: var(--rojo);
   --card-border: transparent;
   --card-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+  --field-bg: rgba(255, 239, 196, 0.5);
 
   color-scheme: dark;
 }

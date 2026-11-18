@@ -1,0 +1,44 @@
+.form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.form-field__label {
+  color: var(--card-muted);
+  font-family: var(--fuente-subtitulos);
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.form-field__control {
+  width: 100%;
+  padding: 0.8rem;
+  color: var(--card-ink);
+  background: var(--field-bg);
+  border: 1px solid var(--card-muted);
+  border-radius: 2px;
+  font-family: var(--fuente-texto);
+  font-size: 1rem;
+}
+
+.form-field__control--textarea {
+  min-height: 130px;
+  resize: vertical;
+}
+
+.form-field__control--invalid {
+  border: 2px solid var(--card-accent);
+}
+
+.form-field :focus-visible {
+  outline-color: var(--card-focus);
+}
+
+.form-field__error {
+  margin: 0;
+  color: var(--card-accent);
+  font-size: 0.95rem;
+  font-weight: 600;
+}
