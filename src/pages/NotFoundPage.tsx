@@ -12,8 +12,8 @@ export function NotFoundPage() {
     <PageSection title="404 – Aquí no yace nadie">
       <ParchmentCard>
         <p>
-          La página que buscas no existe o fue exhumada. Revisa la dirección o regresa al
-          inicio del cementerio.
+          La página que buscas no existe o fue exhumada. Revisa la dirección o regresa al inicio del
+          cementerio.
         </p>
         <div className="not-found-page__actions">
           <ButtonLink to="/" variant="primary">

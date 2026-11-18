@@ -40,7 +40,10 @@ export function ProjectCard({ repo }: ProjectCardProps) {
       <footer className="project-card__footer">
         <ButtonLink to={html_url} external block variant="outline">
           Ver código fuente
-          <span className="visually-hidden"> de {name} en GitHub (se abre en una pestaña nueva)</span>
+          <span className="visually-hidden">
+            {' '}
+            de {name} en GitHub (se abre en una pestaña nueva)
+          </span>
         </ButtonLink>
       </footer>
     </article>
