@@ -23,6 +23,7 @@ export const navItems: NavItem[] = [
   { path: '/', label: 'Inicio', end: true },
   { path: '/personajes', label: 'Mis Personajes' },
   { path: '/proyectos', label: 'Proyectos' },
+  { path: '/contacto', label: 'Contacto' },
 ];
 
 export const characters: CharacterItem[] = [

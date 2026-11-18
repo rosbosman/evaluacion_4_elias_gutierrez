@@ -2,6 +2,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { Layout } from './components/Layout/Layout';
 import { CharacterDetailPage } from './pages/CharacterDetailPage';
 import { CharactersPage } from './pages/CharactersPage';
+import { ContactPage } from './pages/ContactPage';
 import { HomePage } from './pages/HomePage';
 import { NotFoundPage } from './pages/NotFoundPage';
 import { ProjectsPage } from './pages/ProjectsPage';
@@ -16,6 +17,7 @@ export function App() {
           <Route path="personajes" element={<CharactersPage />} />
           <Route path="personajes/:characterId" element={<CharacterDetailPage />} />
           <Route path="proyectos" element={<ProjectsPage />} />
+          <Route path="contacto" element={<ContactPage />} />
           {/* Ruta comodín: cualquier URL no declarada cae aquí */}
           <Route path="*" element={<NotFoundPage />} />
         </Route>
