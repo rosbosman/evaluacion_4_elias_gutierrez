@@ -201,3 +201,17 @@ export interface CharacterFilterProps {
   onClassChange: (selectedClass: string) => void;
   onReset: () => void;
 }
+
+/* ------------------------------------------------------------------ */
+/* Formulario de contacto                                              */
+/* ------------------------------------------------------------------ */
+
+export interface ContactFormValues {
+  nombre: string;
+  mensaje: string;
+}
+
+export type ContactFormField = keyof ContactFormValues;
+
+/** Un campo aparece en este objeto solo si tiene un error de validación. */
+export type ContactFormErrors = Partial<Record<ContactFormField, string>>;
