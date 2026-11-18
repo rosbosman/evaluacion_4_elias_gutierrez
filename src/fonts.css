@@ -1,0 +1,35 @@
+/*
+ * Fuentes de la E2 autoalojadas en /public/fonts (se precargan desde index.html).
+ * font-display: swap muestra texto de inmediato con la fuente de respaldo y la cambia al cargar.
+ */
+@font-face {
+  font-family: 'MedievalSharp';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('/fonts/medievalsharp-latin-400-normal.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Cinzel';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('/fonts/cinzel-latin-400-normal.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Crimson Text';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('/fonts/crimson-text-latin-400-normal.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Crimson Text';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url('/fonts/crimson-text-latin-400-italic.woff2') format('woff2');
+}
