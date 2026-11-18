@@ -1,3 +1,7 @@
+.characters-page__filter {
+  margin-bottom: 2rem;
+}
+
 .characters-page__grid {
   display: grid;
   gap: 2rem;
